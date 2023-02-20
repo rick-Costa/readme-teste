@@ -30,4 +30,4 @@ function pegarArquivo(caminho) {
 
 ![](./desktop-design.jpg)
 
-**Atenção: O arquivo em questão não é para produção. É apenas um arquivo de teste para o readme.md".**
+**⚠️Atenção: O arquivo em questão não é para produção. É apenas um arquivo de teste para o readme.md".**
