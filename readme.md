@@ -28,4 +28,6 @@ function pegarArquivo(caminho) {
 
 ## Adicionando imagem
 
-![](./desktop-design.jpg);
+![](./desktop-design.jpg)
+
+**Atenção: O arquivo em questão não é para produção. É apenas um arquivo de teste para o readme.md".**
