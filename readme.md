@@ -15,3 +15,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a turpis id sapi
 -   item 4
     -   item 4.1
     -   item 4.2
+
+```html
+<h1>Título do html para teste</h1>
+```
+
+```js
+function pegarArquivo(caminho) {
+    console.log(caminho);
+}
+```
