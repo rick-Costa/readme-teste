@@ -21,7 +21,44 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a turpis id sapi
 ```
 
 ```js
-function pegarArquivo(caminho) {
-    console.log(caminho);
+export default class Modal {
+    constructor(botaoAbrir, botaoFechar, containerModal) {
+        this.BotaoAbrir = document.querySelector(botaoAbrir);
+        this.BotaoFechar = document.querySelector(botaoFechar);
+        this.ContainerModal = document.querySelector(containerModal);
+
+        this.ToggleModal = this.ToggleModal.bind(this);
+        this.EventToggleModal = this.EventToggleModal.bind(this);
+        this.CliqueForaModal = this.CliqueForaModal.bind(this);
+    }
+
+    ToggleModal() {
+        this.ContainerModal.classList.toggle('ativo');
+    }
+
+    EventToggleModal(event) {
+        event.preventDefault();
+        this.ToggleModal();
+    }
+
+    CliqueForaModal(event) {
+        if (event.target === this.ContainerModal) {
+            this.ToggleModal();
+        }
+    }
+
+    AddModalEvents() {
+        this.BotaoAbrir.addEventListener('click', this.EventToggleModal);
+        this.BotaoFechar.addEventListener('click', this.EventToggleModal);
+        this.ContainerModal.addEventListener('click', this.CliqueForaModal);
+    }
+
+    Init() {
+        if (this.BotaoAbrir && this.BotaoFechar && this.ContainerModal) {
+            this.AddModalEvents();
+        }
+
+        return this;
+    }
 }
 ```
